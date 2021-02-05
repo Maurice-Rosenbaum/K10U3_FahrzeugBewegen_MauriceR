@@ -34,6 +34,8 @@
             this.buttonSchneller = new System.Windows.Forms.Button();
             this.buttonBeenden = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pkw1 = new K10U3_FahrzeugBewegen_MauriceR.PKW();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -44,6 +46,7 @@
             this.buttonStart.TabIndex = 0;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonFahren
             // 
@@ -53,6 +56,7 @@
             this.buttonFahren.TabIndex = 1;
             this.buttonFahren.Text = "Fahren";
             this.buttonFahren.UseVisualStyleBackColor = true;
+            this.buttonFahren.Click += new System.EventHandler(this.buttonFahren_Click);
             // 
             // buttonLangsamer
             // 
@@ -62,6 +66,7 @@
             this.buttonLangsamer.TabIndex = 2;
             this.buttonLangsamer.Text = "Langsamer";
             this.buttonLangsamer.UseVisualStyleBackColor = true;
+            this.buttonLangsamer.Click += new System.EventHandler(this.buttonLangsamer_Click);
             // 
             // buttonSchneller
             // 
@@ -71,6 +76,7 @@
             this.buttonSchneller.TabIndex = 3;
             this.buttonSchneller.Text = "Schneller";
             this.buttonSchneller.UseVisualStyleBackColor = true;
+            this.buttonSchneller.Click += new System.EventHandler(this.buttonSchneller_Click);
             // 
             // buttonBeenden
             // 
@@ -80,13 +86,27 @@
             this.buttonBeenden.TabIndex = 4;
             this.buttonBeenden.Text = "Beenden";
             this.buttonBeenden.UseVisualStyleBackColor = true;
+            this.buttonBeenden.Click += new System.EventHandler(this.buttonBeenden_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.pkw1);
             this.panel1.Location = new System.Drawing.Point(12, 34);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(574, 51);
             this.panel1.TabIndex = 5;
+            // 
+            // pkw1
+            // 
+            this.pkw1.BackColor = System.Drawing.Color.Red;
+            this.pkw1.ForeColor = System.Drawing.Color.Black;
+            this.pkw1.Location = new System.Drawing.Point(3, 25);
+            this.pkw1.Name = "pkw1";
+            this.pkw1.Size = new System.Drawing.Size(75, 23);
+            this.pkw1.TabIndex = 6;
+            this.pkw1.Text = "PKW";
+            this.pkw1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -101,6 +121,7 @@
             this.Controls.Add(this.buttonStart);
             this.Name = "Form1";
             this.Text = "Geschwindigkeit: 50";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -113,6 +134,7 @@
         private System.Windows.Forms.Button buttonSchneller;
         private System.Windows.Forms.Button buttonBeenden;
         private System.Windows.Forms.Panel panel1;
+        private PKW pkw1;
     }
 }
 
